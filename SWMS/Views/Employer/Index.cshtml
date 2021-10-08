@@ -1,0 +1,68 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
+*@
+@model SWMS.Models.EmployerModel
+@{
+    ViewBag.Title = "Employer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .sp{
+        height:4px;
+    }
+</style>
+@using (Html.BeginForm("", "", FormMethod.Post, new { id = "" }))
+{
+<div>
+    <div class="row">
+
+        <div class="col-3" style="text-align:right">
+            @Html.LabelFor(x => x.Employer, new { @class = "clsCaption" })
+        </div>
+        <div class="col-8">
+            @Html.TextBoxFor(x => x.Employer, new { @class = "form-control form-control-sm rounded-0" })
+        </div>
+        <div class="col-1"></div>
+
+    </div>
+    <div class="sp"></div>
+    <div class="row">
+
+        <div class="col-3" style="text-align:right">
+            @Html.LabelFor(x => x.BusinessName, new { @class = "clsCaption" })
+        </div>
+        <div class="col-8">
+            @Html.TextBoxFor(x => x.BusinessName, new { @class = "form-control form-control-sm rounded-0" })
+        </div>
+        <div class="col-1"></div>
+
+    </div>
+    <div class="sp"></div>
+    <div class="row">
+
+        <div class="col-3" style="text-align:right">
+            @Html.LabelFor(x => x.BusinessAddress, new { @class = "clsCaption" })
+        </div>
+        <div class="col-8">
+            @Html.TextBoxFor(x => x.BusinessAddress, new { @class = "form-control form-control-sm rounded-0" })
+        </div>
+        <div class="col-1"></div>
+
+    </div>
+    <div class="sp"></div>
+    <div class="row">
+
+        <div class="col-3" style="text-align:right">
+            @Html.LabelFor(x => x.BusinessContact, new { @class = "clsCaption" })
+        </div>
+        <div class="col-8">
+            @Html.TextBoxFor(x => x.BusinessContact, new { @class = "form-control form-control-sm rounded-0" })
+        </div>
+        <div class="col-1"></div>
+
+    </div>
+</div>
+    
+
+}
